@@ -1,0 +1,5 @@
+<h1>Haciendo pruebas con los sprites</h1>
+<div *ngFor="let pokemon of pokemons">
+    <img class="sprite" [ngStyle]="{'width': obtenerAncho(pokemon.id), 'height': obtenerAltura(pokemon.id), 'background-position': obtenerPosicion(pokemon.id)}" 
+    src="../assets/img/transparent.png" alt="pokemon.png">
+</div>
