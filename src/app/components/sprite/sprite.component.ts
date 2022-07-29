@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 // Importar archivos JSON
 import coordenadasSprites from 'src/assets/data/sprites.json';
-import listaPokemons from 'src/assets/data/pokemon.json'
+import listaPokemons from 'src/assets/data/pokemon.json';
 
 @Component({
   selector: 'app-sprite',
@@ -12,12 +12,10 @@ import listaPokemons from 'src/assets/data/pokemon.json'
 export class SpriteComponent implements OnInit {
   public coordenadas:any;
   public pokemons:any;
-  public url:string;
 
   constructor() {
     this.coordenadas = coordenadasSprites;
     this.pokemons = listaPokemons;
-    this.url = "src/assets/img/sprites.png";
    }
 
   ngOnInit(): void {
