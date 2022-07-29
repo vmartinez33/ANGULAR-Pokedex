@@ -9,7 +9,7 @@ export class PokemonsComponent implements OnInit {
   public range:Array<number>;
 
   constructor() {
-    this.range = [0,1,2,3,4,5,6,7,8];
+    this.range = [1,2,3,4,5,6,7,8,9];
    }
 
   ngOnInit(): void {

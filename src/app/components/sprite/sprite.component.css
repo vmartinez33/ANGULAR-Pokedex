@@ -1,3 +1,6 @@
 .sprite {
     background-image: url(src/assets/img/sprites.png);
+    border-color: darksalmon;
+    border-width: 2px;
+    border-style: solid;
 }

@@ -15,9 +15,9 @@ export class CartaComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    this.nombre = listaPokemons[this.id].name;
-    this.tipo1 = listaPokemons[this.id].type_1;
-    this.tipo2 = listaPokemons[this.id].type_2;
+    this.nombre = listaPokemons[this.id-1].name;
+    this.tipo1 = listaPokemons[this.id-1].type_1;
+    this.tipo2 = listaPokemons[this.id-1].type_2;
   }
 
 }

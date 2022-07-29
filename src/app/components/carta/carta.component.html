@@ -1,7 +1,7 @@
 <div class="carta">
-    ID: {{id}}
-
-    Nombre: {{nombre | uppercase}} <br>
-    Tipo1:  {{tipo1}}  <br>
-    Tipo2:  {{tipo2}}  <br>
+    ID: {{id}} <br>
+    <app-sprite [id]="id"></app-sprite> 
+    <h3>{{nombre | uppercase}}</h3> 
+    <app-tipo [claveTipo]="tipo1"></app-tipo>
+    <app-tipo *ngIf="tipo2" [claveTipo]="tipo2"></app-tipo>
 </div>
