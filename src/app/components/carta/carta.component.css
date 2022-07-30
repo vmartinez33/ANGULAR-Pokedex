@@ -34,7 +34,7 @@
 }
 
 .pokemon-name{
-    font-family: 'Pokemon Solid';
+    font-family: 'Pokemon Solid', 'Times New Roman', Times, serif;
     color: #ffcc03;
     text-align: center;
     font-size: 25px;
