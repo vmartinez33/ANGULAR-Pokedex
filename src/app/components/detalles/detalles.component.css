@@ -1,0 +1,37 @@
+table.tabpokemon {
+    line-height: 22px;
+}
+table.tabmov, table.tabpokemon {
+    margin: 5px auto 1.5em;
+}
+table.movnivel, table.movmtmo, table.movtutor, table.movhuevo, table.movespecial, table.estadisticas, table.tabmov, table.tabpokemon {
+    border: 2px solid #C6C6C6;
+    border-collapse: collapse;
+    font-size: 90%;
+    text-align: center;
+    margin: 5px 0 1.5em;
+    background-color: #FFFFFF;
+    box-shadow: 0.3em 0.3em 0.5em #acacad;
+}
+table {
+    font-size: 100%;
+}
+table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: grey;
+}
+table.tabpokemon th {
+    background-color: #3B3B3B;
+    border: 2px solid #333;
+    color: white;
+    height: 20px;
+}
+
+table.tabpokemon td {
+    border-right: 1px solid #C6C6C6;
+    border-bottom: 1px solid #C6C6C6;
+}

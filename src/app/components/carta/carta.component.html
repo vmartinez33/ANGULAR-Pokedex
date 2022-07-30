@@ -1,7 +1,15 @@
-<div class="carta">
-    ID: {{pokemon.id}} <br>
-    <app-sprite [id]="pokemon.id" (click)="visualizarDetalles($event)"></app-sprite> 
-    <p>{{pokemon.nombre | uppercase}}</p> 
-    <app-tipo [claveTipo]="pokemon.tipo1"></app-tipo>
-    <app-tipo *ngIf="pokemon.tipo2" [claveTipo]="pokemon.tipo2"></app-tipo>
+<div class="pokemon-card-container">
+    <div class="pokemon-card">
+        <div class="background">
+            <app-sprite [id]="pokemon.id" (click)="visualizarDetalles($event)"></app-sprite> 
+        </div>
+        <div class="content">
+            <h1 class="pokemon-name">{{pokemon.nombre | uppercase}}</h1>
+        <div class="pokemon-stats">
+            <img src="https://raw.githubusercontent.com/vmartinez33/pokemon_images/main/type_rock.png " class="pokemon-tipe1">
+            <img src="https://raw.githubusercontent.com/vmartinez33/pokemon_images/main/type_rock.png " class="pokemon-tipe1">
+        </div>
+        <h1 class="pokemon-logo">Haz clic en la imagen para visualizar los detalles</h1>              
+        </div>    
+    </div>
 </div>
