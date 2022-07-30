@@ -1,5 +1,6 @@
 .sprite {
-    background-image: url(src/assets/img/sprites.png);
+    /* background-image: url(src/assets/img/sprites.png); */
+    background-image: url('https://raw.githubusercontent.com/vmartinez33/pokemon_images/main/sprites.png');
     border-color: darksalmon;
     border-width: 2px;
     border-style: solid;
