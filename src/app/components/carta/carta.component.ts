@@ -1,4 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { Pokemon } from 'src/app/models/pokemon';
+
 import listaPokemons from 'src/assets/data/pokemon.json';
 
 @Component({
@@ -8,6 +10,7 @@ import listaPokemons from 'src/assets/data/pokemon.json';
 })
 export class CartaComponent implements OnInit {
   @Input() public id:number = 0;
+  @Output() public pokemonAVisualizar = new EventEmitter();
   public nombre:string = "";
   public tipo1:string = "";
   public tipo2:string|null = "";
@@ -18,6 +21,10 @@ export class CartaComponent implements OnInit {
     this.nombre = listaPokemons[this.id-1].name;
     this.tipo1 = listaPokemons[this.id-1].type_1;
     this.tipo2 = listaPokemons[this.id-1].type_2;
+  }
+
+  visualizarDetalles(event: Event) {
+    this.pokemonAVisualizar.emit(this.id);    
   }
 
 }

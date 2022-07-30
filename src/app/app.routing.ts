@@ -11,8 +11,8 @@ const appRoutes: Routes= [
 {path: '', component: InicioComponent},
 {path: 'inicio', component: InicioComponent},
 {path: 'pokemons', component: PokemonsComponent},
-{path: 'movimientos', component: MovimientosComponent},
-{path: 'detalles', component: DetallesComponent}
+{path: 'pokemons/:id', component: DetallesComponent},
+{path: 'movimientos', component: MovimientosComponent}
 ];
 
 export const routing: ModuleWithProviders<Object> = RouterModule.forRoot(appRoutes);

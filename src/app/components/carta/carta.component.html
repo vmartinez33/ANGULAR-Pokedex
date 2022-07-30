@@ -1,6 +1,6 @@
 <div class="carta">
     ID: {{id}} <br>
-    <app-sprite [id]="id"></app-sprite> 
+    <app-sprite [id]="id" (click)="visualizarDetalles($event)"></app-sprite> 
     <h3>{{nombre | uppercase}}</h3> 
     <app-tipo [claveTipo]="tipo1"></app-tipo>
     <app-tipo *ngIf="tipo2" [claveTipo]="tipo2"></app-tipo>

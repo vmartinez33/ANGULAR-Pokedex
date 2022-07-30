@@ -1,5 +1,5 @@
 header div.fondo_titulo {
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Abstract_blue_background7.jpg/800px-Abstract_blue_background7.jpg');
+    background-image: url(src/assets/img/cabecera.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
