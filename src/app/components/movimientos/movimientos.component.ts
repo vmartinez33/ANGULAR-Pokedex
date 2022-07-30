@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/data.service';
 
 import { Movimiento } from 'src/app/models/movimiento';
-
-import listaMovimientos from 'src/assets/data/moves.json'
 
 @Component({
   selector: 'app-movimientos',
@@ -12,14 +11,8 @@ import listaMovimientos from 'src/assets/data/moves.json'
 export class MovimientosComponent implements OnInit {
   public movimientos:Array<Movimiento>;
 
-  constructor() {
-    this.movimientos = [];
-
-    for (let i=0; i<listaMovimientos.length; i++) {
-      let data = listaMovimientos[i];
-      this.movimientos[i] = new Movimiento(data.name, data.type, data.category, data.power, data.accuracy, data.pp, data.description);
-    }
-
+  constructor(private dataService: DataService) {
+    this.movimientos = dataService.getMovesList();
   }
 
   ngOnInit(): void {

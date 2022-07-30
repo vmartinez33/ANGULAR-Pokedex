@@ -29,7 +29,7 @@ export class DetallesComponent implements OnInit {
     //   this.pokemon = JSON.parse(params["pokemon"])
     // });
 
-    this.pokemon = this.dataService.getPokemon();  
+    this.pokemon = this.dataService.getSavedPokemon();  
   }
 
 }
