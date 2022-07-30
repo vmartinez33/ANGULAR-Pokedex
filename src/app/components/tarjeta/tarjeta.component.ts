@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-
-import listaMovimientos from 'src/assets/data/moves.json'
+import { Movimiento } from 'src/app/models/movimiento';
 
 @Component({
   selector: 'app-tarjeta',
@@ -8,7 +7,7 @@ import listaMovimientos from 'src/assets/data/moves.json'
   styleUrls: ['./tarjeta.component.css']
 })
 export class TarjetaComponent implements OnInit {
-  @Input() public nombre:string = "";
+  @Input() public movimiento:Movimiento = new Movimiento("", "", "" , "", -1, -1, "");
 
   constructor() { }
 

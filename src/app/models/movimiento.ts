@@ -4,7 +4,7 @@ export class Movimiento {
         public tipo:string,
         public categoria:string,
         public potencia: string|null,
-        public precision: number,
+        public precision: number|null,
         public pp:number,
         public descripcion:string,
     ) {}

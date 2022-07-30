@@ -1,3 +1,4 @@
-<div *ngFor="let id of range">
-    <app-carta [id]="id" (pokemonAVisualizar)="mostrarDetalles($event)"></app-carta>
+
+<div *ngFor="let pokemon of pokemons">
+    <app-carta [pokemon]="pokemon" (pokemonAVisualizar)="mostrarDetalles($event)"></app-carta>
 </div>

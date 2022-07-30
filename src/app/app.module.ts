@@ -14,6 +14,7 @@ import { NavegacionComponent } from './components/navegacion/navegacion.componen
 import { PieComponent } from './components/pie/pie.component';
 import { DetallesComponent } from './components/detalles/detalles.component';
 import { TarjetaComponent } from './components/tarjeta/tarjeta.component';
+import { DataService } from './data.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { TarjetaComponent } from './components/tarjeta/tarjeta.component';
     BrowserModule,
     routing
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,7 +1,7 @@
 <div class="carta">
-    ID: {{id}} <br>
-    <app-sprite [id]="id" (click)="visualizarDetalles($event)"></app-sprite> 
-    <h3>{{nombre | uppercase}}</h3> 
-    <app-tipo [claveTipo]="tipo1"></app-tipo>
-    <app-tipo *ngIf="tipo2" [claveTipo]="tipo2"></app-tipo>
+    ID: {{pokemon.id}} <br>
+    <app-sprite [id]="pokemon.id" (click)="visualizarDetalles($event)"></app-sprite> 
+    <p>{{pokemon.nombre | uppercase}}</p> 
+    <app-tipo [claveTipo]="pokemon.tipo1"></app-tipo>
+    <app-tipo *ngIf="pokemon.tipo2" [claveTipo]="pokemon.tipo2"></app-tipo>
 </div>

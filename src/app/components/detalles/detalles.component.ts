@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { DataService } from 'src/app/data.service';
 
 import { Pokemon } from 'src/app/models/pokemon';
-
-import listaPokemons from 'src/assets/data/pokemon.json';
 
 @Component({
   selector: 'app-detalles',
@@ -14,16 +13,23 @@ export class DetallesComponent implements OnInit {
   public pokemon:Pokemon;
 
   constructor(
-    private route:ActivatedRoute
+    private route:ActivatedRoute,
+    private dataService: DataService
   ) {
     this.pokemon = new Pokemon(-1, "", "", "", [], [], {});
-   }
+  }
 
   ngOnInit(): void {
-    this.route.params.subscribe((params: Params) =>{ 
-      let data = listaPokemons[params["id"]-1];
-      this.pokemon = new Pokemon(data.id, data.name, data.type_1, data.type_2, data.abilities, data.moves, data.stats);
-    });
+    // this.route.params.subscribe((params: Params) =>{ 
+    //   let data = listaPokemons[params["id"]-1];
+    //   this.pokemon = new Pokemon(data.id, data.name, data.type_1, data.type_2, data.abilities, data.moves, data.stats);
+    // });
+
+    // this.route.queryParams.subscribe(params => {
+    //   this.pokemon = JSON.parse(params["pokemon"])
+    // });
+
+    this.pokemon = this.dataService.getPokemon();  
   }
 
 }
