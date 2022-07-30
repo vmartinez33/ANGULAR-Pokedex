@@ -13,6 +13,7 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { NavegacionComponent } from './components/navegacion/navegacion.component';
 import { PieComponent } from './components/pie/pie.component';
 import { DetallesComponent } from './components/detalles/detalles.component';
+import { TarjetaComponent } from './components/tarjeta/tarjeta.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { DetallesComponent } from './components/detalles/detalles.component';
     InicioComponent,
     NavegacionComponent,
     PieComponent,
-    DetallesComponent
+    DetallesComponent,
+    TarjetaComponent
   ],
   imports: [
     BrowserModule,

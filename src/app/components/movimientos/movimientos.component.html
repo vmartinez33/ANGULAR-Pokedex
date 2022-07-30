@@ -1,1 +1,3 @@
-<p>movimientos works!</p>
+<div *ngFor="let movimiento of movimientos">
+    <app-tarjeta [nombre]="movimiento.nombre"></app-tarjeta>
+</div>
