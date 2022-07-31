@@ -1,5 +1,6 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { Pokemon } from 'src/app/models/pokemon';
+import { Stats } from 'src/app/models/stats';
 
 @Component({
   selector: 'app-carta',
@@ -7,7 +8,7 @@ import { Pokemon } from 'src/app/models/pokemon';
   styleUrls: ['./carta.component.css']
 })
 export class CartaComponent implements OnInit {
-  @Input() public pokemon:Pokemon = new Pokemon(-1, "", "", "", [], [], {});
+  @Input() public pokemon:Pokemon = new Pokemon(-1, "", "", "", [], [], new Stats(0,0,0,0,0,0));
   @Output() public pokemonAVisualizar = new EventEmitter();
 
   constructor() {}

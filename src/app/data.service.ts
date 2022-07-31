@@ -2,23 +2,30 @@ import { Injectable } from '@angular/core';
 
 import { Pokemon } from './models/pokemon';
 import { Movimiento } from './models/movimiento';
+import { Stats } from './models/stats';
 
 import listaPokemons from 'src/assets/data/pokemon.json'
 import listaMovimientos from 'src/assets/data/moves.json'
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
-  private pokemon:Pokemon = new Pokemon(-1, "", "", "", [], [], {});
+  private pokemon:Pokemon;
   private listaPokemon:Array<Pokemon>;
   private listaMovimientos:Array<Movimiento>;
 
   constructor() {
+    this.pokemon = new Pokemon(-1, "", "", "", [], [], new Stats(0,0,0,0,0,0));
+
     this.listaPokemon = [];
     for (let i=0; i<listaPokemons.length; i++) {
       let data = listaPokemons[i];
-      this.listaPokemon[i] = new Pokemon(data.id, data.name, data.type_1, data.type_2, data.abilities, data.moves, data.stats);
+      let stats:Stats = new Stats(
+        data.stats.hp, data.stats.attack, data.stats.defense, data.stats['special-attack'], data.stats['special-defense'], data.stats.speed
+        );
+      this.listaPokemon[i] = new Pokemon(data.id, data.name, data.type_1, data.type_2, data.abilities, data.moves, stats);
     }
 
     this.listaMovimientos = [];

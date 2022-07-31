@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { DataService } from 'src/app/data.service';
 
 import { Pokemon } from 'src/app/models/pokemon';
+import { Stats } from 'src/app/models/stats';
 
 @Component({
   selector: 'app-detalles',
@@ -16,7 +17,7 @@ export class DetallesComponent implements OnInit {
     private route:ActivatedRoute,
     private dataService: DataService
   ) {
-    this.pokemon = new Pokemon(-1, "", "", "", [], [], {});
+    this.pokemon = new Pokemon(-1, "", "", "", [], [], new Stats(0,0,0,0,0,0));
   }
 
   ngOnInit(): void {
@@ -29,7 +30,7 @@ export class DetallesComponent implements OnInit {
     //   this.pokemon = JSON.parse(params["pokemon"])
     // });
 
-    this.pokemon = this.dataService.getSavedPokemon();  
+    this.pokemon = this.dataService.getSavedPokemon();
   }
 
 }
