@@ -26,6 +26,7 @@ export class DataService {
       let data = listaMovimientos[i];
       this.listaMovimientos[i] = new Movimiento(data.name, data.type, data.category, data.power, data.accuracy, data.pp, data.description);
     }
+
    }
 
   public savePokemon (pokemonData:Pokemon): void {

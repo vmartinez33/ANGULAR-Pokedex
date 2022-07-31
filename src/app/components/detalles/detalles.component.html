@@ -1,12 +1,39 @@
 <h1>Detalles del pokemon</h1>
-<span>Este es el id: {{pokemon.id}}</span> <br>
-<span>Este es el nombre: {{pokemon.nombre}}</span>
 
+<table class="table table-striped">
+   <thead>
+ <tr>
+   <th scope="col">ID</th>
+   <th scope="col">Nombre</th>
+   <th scope="col">Tipos</th>
+   <th scope="col">Habilidades</th>
+ </tr>
+</thead>
+<tbody>
+ <tr>
+   <th scope="row">{{pokemon.id}}</th>
+   <td>{{pokemon.nombre}}</td>
+   <td>{{pokemon.tipo1}}</td>
+   <td>{{pokemon.habilidades}}</td>
+ </tr>
+</tbody>
+<br>
+
+<ul class="list-group">
+   <li class="list-group-item"><h4>Movimientos</h4></li>
+   <li class="list-group-item list-group-item-info" *ngFor="let movimiento of pokemon.movimientos">{{movimiento}}</li>
+
+ </ul>
+
+<br>
+<h4>Estadisticas</h4>
+
+</table>
       <table class="tabpokemon">
          <tbody>
             <tr class="enlacesblancos">
                <th></th>
-               <th colspan="2">Stats</th>
+               <th colspan="2">Estadisticas</th>
             </tr>
             <tr>
                <th class="enlacesblancos">HP</th>
@@ -17,7 +44,7 @@
             </tr>
             <tr>
                <th class="enlacesblancos">Attack</th>
-               <td>{{pokemon.habilidades[0]}}</td>
+               <td>{{pokemon.habilidades[1]}</td>
                <td>
                   <div class="float-app" style="background-color: #FAAC58; border: 1px solid #FF8000; width: calc(100% * 49/257); border-radius:5px; height:12px"></div>
                </td>

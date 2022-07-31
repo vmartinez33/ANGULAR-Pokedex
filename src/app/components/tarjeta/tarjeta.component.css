@@ -1,4 +1,12 @@
-div {
-    border-width: 2px;
-    border-style: solid;
+.main {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px;
+}
+
+.tarjeta {
+    width: 200px;
+    height: 200px;
 }

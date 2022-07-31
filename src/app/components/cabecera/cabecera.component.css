@@ -21,7 +21,12 @@ header.titulo_principal h1{
     margin: 0px;
     height: 100px;
     line-height: 100px;
+    font-family: 'Pokemon Solid';
+    background: linear-gradient(to right, #d15151, #bd0f03 );
+    color: #ffcc03;
     text-align: center;
-    font-family: 'Orbitron', sans-serif;
-    background-color: #e3e1ec;
+    font-size: 45px;
+    font-weight: lighter;
+    padding: 10px;
+    -webkit-text-stroke: 0.9px blue;
 }
