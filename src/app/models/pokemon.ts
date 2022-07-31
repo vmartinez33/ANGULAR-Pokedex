@@ -9,6 +9,6 @@ export class Pokemon{
         public tipo2:string|null,
         public habilidades:Array<string>,
         public movimientos:Array<string>,
-        public estadisticas:any
+        public estadisticas:Stats
         ) {}
 }
