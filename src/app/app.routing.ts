@@ -5,14 +5,15 @@ import { InicioComponent } from "./components/inicio/inicio.component";
 import { PokemonsComponent } from "./components/pokemons/pokemons.component";
 import { MovimientosComponent } from "./components/movimientos/movimientos.component";
 import { DetallesComponent } from "./components/detalles/detalles.component";
-// import { ErrorComponent } from "./components/error/error.component";
+import { ErrorComponent } from "./components/error/error.component";
 
 const appRoutes: Routes= [
 {path: '', component: InicioComponent},
 {path: 'inicio', component: InicioComponent},
 {path: 'pokemons', component: PokemonsComponent},
 {path: 'pokemons/:id', component: DetallesComponent},
-{path: 'movimientos', component: MovimientosComponent}
+{path: 'movimientos', component: MovimientosComponent},
+{path: '**', component: ErrorComponent}
 ];
 
 export const routing: ModuleWithProviders<Object> = RouterModule.forRoot(appRoutes);

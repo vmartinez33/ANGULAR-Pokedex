@@ -1,6 +1,10 @@
 <div class="espacio">
+    <mat-paginator [length]="pokemons.length" pageSize="30" (page)="getPaginatorData($event)" 
+                   [pageSizeOptions]="[12, 30, 60, 120]"
+                   showFirstLastButtons="true">
+    </mat-paginator>
     <div class="container-cartas" *ngIf="pokemons">
-        <article class="article-carta" *ngFor="let pokemon of pokemons">
+        <article class="article-carta" *ngFor="let pokemon of (pokemons | slice : inicio : fin)">
             <app-carta [pokemon]="pokemon" (pokemonAVisualizar)="mostrarDetalles($event)"></app-carta>
         </article>
     </div>

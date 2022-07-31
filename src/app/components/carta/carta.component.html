@@ -1,15 +1,15 @@
-<div class="pokemon-card-container" (click)="visualizarDetalles($event)">
+<div [ngClass]="'pokemon-card-container ' + pokemon.tipo1" (click)="visualizarDetalles($event)">
     <div class="pokemon-card">
-        <div class="background">
+        <div [ngClass]="'background ' + pokemon.tipo1">
             <app-sprite [id]="pokemon.id"></app-sprite> 
         </div>
-        <div class="content">
+        <div [ngClass]="'content ' + pokemon.tipo1">
+            <p class="pokemon-id">{{'Nº ' + pokemon.id}}</p>
             <h1 class="pokemon-name">{{pokemon.nombre | uppercase}}</h1>
         <div class="pokemon-stats">
-            <img [src]="obtenerURL(pokemon.tipo1)" class="pokemon-tipe1" [alt]="pokemon.tipo1">
-            <img *ngIf="pokemon.tipo2" [src]="obtenerURL(pokemon.tipo2)" class="pokemon-tipe1" [alt]="pokemon.tipo2">
+            <img [src]="dataService.getURL(pokemon.tipo1)" class="pokemon-type" [alt]="pokemon.tipo1">
+            <img *ngIf="pokemon.tipo2" [src]="dataService.getURL(pokemon.tipo2)" class="pokemon-type" [alt]="pokemon.tipo2">
         </div>
-        <h1 class="pokemon-logo">Pokecard</h1>              
         </div>    
     </div>
 </div>

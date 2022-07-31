@@ -51,4 +51,8 @@ export class DataService {
     return this.listaMovimientos;
   }
 
+  public getURL(file:string): string {
+    return `https://raw.githubusercontent.com/vmartinez33/pokemon_images/main/${file}.png`;
+  }
+
 }

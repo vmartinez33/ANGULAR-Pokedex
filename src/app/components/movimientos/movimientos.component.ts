@@ -12,11 +12,13 @@ export class MovimientosComponent implements OnInit {
   public movimientos:Array<Movimiento>;
   public detalles:string;
   public visible:boolean;
+  public movimientoAMostrar:Movimiento;
 
-  constructor(private dataService: DataService) {
+  constructor(public dataService: DataService) {
     this.movimientos = this.dataService.getMovesList();
     this.detalles = "";
     this.visible = false;
+    this.movimientoAMostrar = new Movimiento("","","","",0,0,"");
   }
 
   ngOnInit(): void {
@@ -24,7 +26,7 @@ export class MovimientosComponent implements OnInit {
 
   public mostrarDetalles(movimiento: Movimiento): void {
     this.visible = true;
-    this.detalles = `El movimiento es: ${movimiento.nombre}`;
+    this.movimientoAMostrar = movimiento;
     window.scroll(0,0);
   }
 

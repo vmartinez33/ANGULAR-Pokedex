@@ -1,0 +1,12 @@
+h1.titulo-error {
+    text-align: center;
+    font-size: 48pt;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+img.imagen-error {
+    display: block;
+    margin: auto;
+    margin-bottom: 25px;
+}

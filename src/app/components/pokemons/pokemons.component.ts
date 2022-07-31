@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataService } from 'src/app/data.service';
+import { PageEvent } from '@angular/material/paginator'
 
 import { Pokemon } from 'src/app/models/pokemon';
 
@@ -11,12 +12,16 @@ import { Pokemon } from 'src/app/models/pokemon';
 })
 export class PokemonsComponent implements OnInit {
   public pokemons:Array<Pokemon>;
+  public inicio:number;
+  public fin:number;
 
   constructor(
     private router:Router,
     private dataService: DataService
   ) {
     this.pokemons = this.dataService.getPokemonList();
+    this.inicio = 0;
+    this.fin = 30;
    }
 
   ngOnInit(): void {
@@ -25,11 +30,10 @@ export class PokemonsComponent implements OnInit {
   mostrarDetalles(pokemon:Pokemon) {
     this.dataService.savePokemon(pokemon);
     this.router.navigate([`/pokemons/${pokemon.id}`]);
+  }
 
-    // let extras:NavigationExtras = {
-    //   queryParams: { "pokemon": JSON.stringify(pokemon) }
-    // }
-    // this.router.navigate([`/pokemons/${pokemon.id}}`], extras);
-
+  getPaginatorData (event:PageEvent) {
+    this.inicio = event.pageIndex * event.pageSize;
+    this.fin = this.inicio + event.pageSize;
   }
 }

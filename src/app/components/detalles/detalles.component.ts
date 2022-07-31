@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { DataService } from 'src/app/data.service';
 
 import { Pokemon } from 'src/app/models/pokemon';
@@ -16,8 +15,7 @@ export class DetallesComponent implements OnInit {
   public constante:number;
 
   constructor(
-    private route:ActivatedRoute,
-    private dataService: DataService
+    public dataService: DataService
   ) {
     this.pokemon = new Pokemon(-1, "", "", "", [], [], new Stats(0,0,0,0,0,0));
     this.total = 0;
@@ -31,8 +29,18 @@ export class DetallesComponent implements OnInit {
     window.scroll(0,0);
   }
 
-  public obtenerURL(tipo:string):string {
-    let tipoPrueba:string = "rock"; 
-    return `https://raw.githubusercontent.com/vmartinez33/pokemon_images/main/type_${tipoPrueba}.png`;
+  public obtenerColor(stat:number):string {
+    if (stat <= 40) {
+      return "#fa5858"
+    } else if (stat > 40 && stat <= 70) {
+      return "#FAAC58"
+    } else if (stat > 70 && stat <= 100) {
+      return "#F7D358"
+    } else if (stat > 100 && stat <= 130) {
+      return "#82fa58"
+    } else {
+      return "#58faac"
+    }
   }
+  
 }

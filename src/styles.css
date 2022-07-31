@@ -9,3 +9,37 @@ body {
     margin-bottom: 40px;
     background-image: url('https://raw.githubusercontent.com/vmartinez33/pokemon_images/main/fondo.png');
 }
+
+table {
+    border: 2px solid #C6C6C6;
+    display: table;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: grey;
+    font-size: 90%;
+    text-align: center;
+    margin: auto;
+    background-color: #FFFFFF;
+    box-shadow: 0.3em 0.3em 0.5em #acacad;
+    line-height: 22px;   
+}
+
+table th {
+    background-color: #3B3B3B;
+    border: 2px solid #333;
+    color: white;
+    height: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+table td {
+    border-right: 1px solid #C6C6C6;
+    border-bottom: 1px solid #C6C6C6;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

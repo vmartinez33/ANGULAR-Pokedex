@@ -14,6 +14,9 @@ import { PieComponent } from './components/pie/pie.component';
 import { DetallesComponent } from './components/detalles/detalles.component';
 import { TarjetaComponent } from './components/tarjeta/tarjeta.component';
 import { DataService } from './data.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { ErrorComponent } from './components/error/error.component';
 
 @NgModule({
   declarations: [
@@ -27,11 +30,14 @@ import { DataService } from './data.service';
     NavegacionComponent,
     PieComponent,
     DetallesComponent,
-    TarjetaComponent
+    TarjetaComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
-    routing
+    routing,
+    BrowserAnimationsModule,
+    MatPaginatorModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

@@ -4,7 +4,7 @@
 }
 
 .pokemon-card-container{
-    background: linear-gradient(to right, #fad61f, #fad61f );
+    background-color: linear-gradient(to right, #fad61f, #fad61f );
     width: 250px;
     height: auto;
     margin: 10%;
@@ -15,7 +15,7 @@
 
 .background {
     text-align: center;
-    background: linear-gradient(to right, #6a5b0e, #504921 );
+    background-color: linear-gradient(to right, #6a5b0e, #504921 );
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
 }
@@ -26,11 +26,10 @@
 }
 
 .content{
-    background: linear-gradient(to right,#f5e593, #fff2af );
+    background-color: linear-gradient(to right,#f5e593, #fff2af );
     padding: 10px;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
-
 }
 
 .pokemon-name{
@@ -43,17 +42,296 @@
     -webkit-text-stroke: 0.9px blue;
 }
 
-.pokemon-logo{
+.pokemon-id {
+    background-color: #000000cc;
+    padding: 7px;
+    color: white;
+    border-radius: 5px;
+    width: 70px;
+    margin: auto;
+    display: block;
     text-align: center;
-    font-size: 14px;
-    padding: 20px;
+    bottom: 95px;
 }
 
-.pokemon-tipe1{
+.pokemon-type{
     width: 105px;
     height: 45px;
 }
 
-.pokemon-stats > p {
+.pokemon-stats{
+    text-align: center;
     letter-spacing: 1px;
+}
+
+
+/* Estilos del tipo Normal */
+
+.pokemon-card-container.normal {
+    background-color: #84837b;
+}
+
+.background.normal {
+    background-color: #383835; 
+}
+
+.content.normal {
+    background-color: #a9a89e;
+}
+
+
+/* Estilos del tipo Planta */
+
+.pokemon-card-container.grass {
+    background-color: #629739;
+}
+
+.background.grass {
+    background-color: #2a4018;
+}
+
+.content.grass {
+    background-color: #7ec249;
+}
+
+
+/* Estilos del tipo Agua */
+
+.pokemon-card-container.water {
+    background-color: #3b79b3;
+}
+
+.background.water {
+    background-color: #19344c; 
+}
+
+.content.water {
+    background-color: #4d9ce6;
+}
+
+
+/* Estilos del tipo Fuego */
+
+.pokemon-card-container.fire {
+    background-color: #af3c2f;
+}
+
+.background.fire {
+    background-color: #4b1a14;   
+}
+
+.content.fire {
+    background-color: #e14d3c;
+}
+
+
+/* Estilos del tipo Lucha */
+
+.pokemon-card-container.fighting {
+    background-color: #753c30;
+}
+
+.background.fighting {
+    background-color: #321a15;  
+}
+
+.content.fighting {
+    background-color: #964d3e;
+}
+
+
+/* Estilos del tipo Volador */
+
+.pokemon-card-container.flying {
+    background-color: #5573b3;
+}
+
+.background.flying {
+    background-color: #24314c;  
+}
+
+.content.flying {
+    background-color: #6d94e6;
+}
+
+
+/* Estilos del tipo Veneno */
+
+.pokemon-card-container.poison {
+    background-color: #784271;
+}
+
+.background.poison {
+    background-color: #331c31;  
+}
+
+.content.poison {
+    background-color: #9a5592;
+}
+
+
+/* Estilos del tipo Tierra */
+
+.pokemon-card-container.ground {
+    background-color: #a8913e;
+}
+
+.background.ground {
+    background-color: #483e1a;  
+}
+
+.content.ground {
+    background-color:#d8ba4f;
+}
+
+
+/* Estilos del tipo Roca */
+
+.pokemon-card-container.rock {
+    background-color: #908450;
+}
+
+.background.rock {
+    background-color: #3d3922;  
+}
+
+.content.rock {
+    background-color: #b9aa67;
+}
+
+
+/* Estilos del tipo Bicho */
+
+.pokemon-card-container.bug {
+    background-color: #889316;
+}
+
+.background.bug {
+    background-color: #3a3f09;
+      
+}
+
+.content.bug {
+    background-color: #afbd1c;
+}
+
+
+/* Estilos del tipo Fantasma */
+
+.pokemon-card-container.ghost {
+    background-color: #545194;
+}
+
+.background.ghost {
+    background-color: #242340;  
+}
+
+.content.ghost {
+    background-color: #6c68bf;
+}
+
+
+/* Estilos del tipo Electrico */
+
+.pokemon-card-container.electric {
+    background-color:#b1a02a;
+}
+
+.background.electric {
+    background-color: #4c4512;  
+}
+
+.content.electric {
+    background-color: #e4ce36;
+}
+
+
+/* Estilos del tipo Psiquico */
+
+.pokemon-card-container.psychic {
+    background-color:#af467f;
+}
+
+.background.psychic {
+    background-color: #4b1e36;  
+}
+
+.content.psychic {
+    background-color: #e15aa3;
+}
+
+
+/* Estilos del tipo Hielo */
+
+.pokemon-card-container.ice {
+    background-color: #69a9b3;
+}
+
+.background.ice {
+    background-color: #2d484c;  
+}
+
+.content.ice {
+    background-color:#87d9e6;
+}
+
+
+/* Estilos del tipo Dragon */
+
+.pokemon-card-container.dragon {
+    background-color:#6152b3;
+}
+
+.background.dragon {
+    background-color: #29234c;  
+}
+
+.content.dragon {
+    background-color:#7c69e6;
+}
+
+
+/* Estilos del tipo Siniestro */
+
+.pokemon-card-container.dark {
+    background-color: #5a4337;
+}
+
+.background.dark {
+    background-color: #271d17;  
+}
+
+.content.dark {
+    background-color: #745646;
+}
+
+
+/* Estilos del tipo Acero */
+
+.pokemon-card-container.steel {
+    background-color:#898897;
+}
+
+.background.steel {
+    background-color:#3a3a41;
+
+}
+
+.content.steel {
+    background-color:#b0afc2;
+}
+
+
+/* Estilos del tipo Hada */
+
+.pokemon-card-container.fairy {
+    background-color: #af79b3;
+}
+
+.background.fairy {
+    background-color:#4b344c;  
+}
+
+.content.fairy {
+    background-color: #e19ce6;
 }

@@ -19,10 +19,10 @@
          </tr>
          <tr>
             <th rowspan="2" scope="col">Tipos</th>
-            <td scope="row"><img [src]="obtenerURL(pokemon.tipo1)" class="pokemon-tipo" [alt]="pokemon.tipo1"></td>
+            <td scope="row"><img [src]="dataService.getURL(pokemon.tipo1)" class="pokemon-tipo" [alt]="pokemon.tipo1"></td>
          </tr>
          <tr>
-            <td *ngIf="pokemon.tipo2" scope="row"><img [src]="obtenerURL(pokemon.tipo2)" class="pokemon-tipo"
+            <td *ngIf="pokemon.tipo2" scope="row"><img [src]="dataService.getURL(pokemon.tipo2)" class="pokemon-tipo"
                   [alt]="pokemon.tipo2"></td>
          </tr>
          <tr>
@@ -42,7 +42,7 @@
             <td style="width:3em">{{pokemon.estadisticas.hp}}</td>
             <td style="width:257px">
                <div
-                  [ngStyle]="{'background-color': '#FAAC58', 'border': '1px solid #FF8000', 'width': 'calc(100% *' + pokemon.estadisticas.hp/constante + ')', 'border-radius':'5px', 'height':'12px'}">
+                  [ngStyle]="{'background-color': obtenerColor(pokemon.estadisticas.hp), 'border': '1px solid #FF8000', 'width': 'calc(100% *' + pokemon.estadisticas.hp/constante + ')', 'border-radius':'5px', 'height':'12px'}">
                </div>
             </td>
          </tr>
@@ -51,7 +51,7 @@
             <td>{{pokemon.estadisticas.ataque}}</td>
             <td>
                <div
-                  [ngStyle]="{'background-color': '#FAAC58', 'border': '1px solid #FF8000', 'width': 'calc(100% *' + pokemon.estadisticas.ataque/constante + ')', 'border-radius':'5px', 'height':'12px'}">
+                  [ngStyle]="{'background-color': obtenerColor(pokemon.estadisticas.ataque), 'border': '1px solid #FF8000', 'width': 'calc(100% *' + pokemon.estadisticas.ataque/constante + ')', 'border-radius':'5px', 'height':'12px'}">
                </div>
             </td>
          </tr>
@@ -60,7 +60,7 @@
             <td>{{pokemon.estadisticas.defensa}}</td>
             <td>
                <div
-                  [ngStyle]="{'background-color': '#FAAC58', 'border': '1px solid #FF8000', 'width': 'calc(100% *' + pokemon.estadisticas.defensa/constante + ')', 'border-radius':'5px', 'height':'12px'}">
+                  [ngStyle]="{'background-color': obtenerColor(pokemon.estadisticas.defensa), 'border': '1px solid #FF8000', 'width': 'calc(100% *' + pokemon.estadisticas.defensa/constante + ')', 'border-radius':'5px', 'height':'12px'}">
                </div>
             </td>
          </tr>
@@ -69,7 +69,7 @@
             <td>{{pokemon.estadisticas.ataque_especial}}</td>
             <td>
                <div
-                  [ngStyle]="{'background-color': '#FAAC58', 'border': '1px solid #FF8000', 'width': 'calc(100% *' + pokemon.estadisticas.ataque_especial/constante + ')', 'border-radius':'5px', 'height':'12px'}">
+                  [ngStyle]="{'background-color': obtenerColor(pokemon.estadisticas.ataque_especial), 'border': '1px solid #FF8000', 'width': 'calc(100% *' + pokemon.estadisticas.ataque_especial/constante + ')', 'border-radius':'5px', 'height':'12px'}">
                </div>
             </td>
          </tr>
@@ -78,7 +78,7 @@
             <td>{{pokemon.estadisticas.defensa_especial}}</td>
             <td>
                <div
-                  [ngStyle]="{'background-color': '#FAAC58', 'border': '1px solid #FF8000', 'width': 'calc(100% *' + pokemon.estadisticas.defensa_especial/constante + ')', 'border-radius':'5px', 'height':'12px'}">
+                  [ngStyle]="{'background-color': obtenerColor(pokemon.estadisticas.defensa_especial), 'border': '1px solid #FF8000', 'width': 'calc(100% *' + pokemon.estadisticas.defensa_especial/constante + ')', 'border-radius':'5px', 'height':'12px'}">
                </div>
             </td>
          </tr>
@@ -87,7 +87,7 @@
             <td>{{pokemon.estadisticas.velocidad}}</td>
             <td>
                <div
-                  [ngStyle]="{'background-color': '#FAAC58', 'border': '1px solid #FF8000', 'width': 'calc(100% *' + pokemon.estadisticas.velocidad/constante + ')', 'border-radius':'5px', 'height':'12px'}">
+                  [ngStyle]="{'background-color': obtenerColor(pokemon.estadisticas.velocidad), 'border': '1px solid #FF8000', 'width': 'calc(100% *' + pokemon.estadisticas.velocidad/constante + ')', 'border-radius':'5px', 'height':'12px'}">
                </div>
             </td>
          </tr>

@@ -7,4 +7,11 @@
     font-size: 45px;
     font-weight: lighter;
     -webkit-text-stroke: 0.9px blue;
+    margin-bottom: 35px;
+}
+
+img.imagen-inicio {
+    display: block;
+    margin: auto;
+    margin-bottom: 25px;
 }
