@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-body">
-        <h5 class="card-title">{{movimiento.nombre}}</h5>
+        <h3 class="card-title"><strong>{{movimiento.nombre}}</strong></h3>
         <img width="75" [src]="dataService.getURL(movimiento.tipo)" [alt]="movimiento.tipo">
         <img [src]="dataService.getURL(movimiento.categoria)" [alt]="movimiento.categoria">
         <br>
