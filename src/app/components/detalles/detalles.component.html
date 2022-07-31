@@ -1,86 +1,108 @@
-<h1>Detalles del pokemon</h1>
+<div class="contenido-superior">
+   <table class="tabpokemon">
+      <thead>
+         <tr>
+            <th colspan="3">Detalles del Pokemon</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td rowspan="5" class="sprite-column">
+               <app-sprite [id]="pokemon.id"></app-sprite>
+            </td>
+            <th scope="col">Nº</th>
+            <td scope="row">{{pokemon.id}}</td>
+         </tr>
+         <tr>
+            <th scope="col">Nombre</th>
+            <td scope="row">{{pokemon.nombre}}</td>
+         </tr>
+         <tr>
+            <th rowspan="2" scope="col">Tipos</th>
+            <td scope="row"><img [src]="obtenerURL(pokemon.tipo1)" class="pokemon-tipo" [alt]="pokemon.tipo1"></td>
+         </tr>
+         <tr>
+            <td *ngIf="pokemon.tipo2" scope="row"><img [src]="obtenerURL(pokemon.tipo2)" class="pokemon-tipo"
+                  [alt]="pokemon.tipo2"></td>
+         </tr>
+         <tr>
+            <th scope="col">Habilidades</th>
+            <td scope="row">{{pokemon.habilidades.join(' | ')}}</td>
+         </tr>
+      </tbody>
+   </table>
+   <table class="tabstats">
+      <tbody>
+         <tr>
+            <th></th>
+            <th colspan="2">Estadisticas</th>
+         </tr>
+         <tr>
+            <th>PS</th>
+            <td style="width:3em">{{pokemon.estadisticas.hp}}</td>
+            <td style="width:257px">
+               <div
+                  [ngStyle]="{'background-color': '#FAAC58', 'border': '1px solid #FF8000', 'width': 'calc(100% *' + pokemon.estadisticas.hp/constante + ')', 'border-radius':'5px', 'height':'12px'}">
+               </div>
+            </td>
+         </tr>
+         <tr>
+            <th>Ataque</th>
+            <td>{{pokemon.estadisticas.ataque}}</td>
+            <td>
+               <div
+                  [ngStyle]="{'background-color': '#FAAC58', 'border': '1px solid #FF8000', 'width': 'calc(100% *' + pokemon.estadisticas.ataque/constante + ')', 'border-radius':'5px', 'height':'12px'}">
+               </div>
+            </td>
+         </tr>
+         <tr>
+            <th>Defensa</th>
+            <td>{{pokemon.estadisticas.defensa}}</td>
+            <td>
+               <div
+                  [ngStyle]="{'background-color': '#FAAC58', 'border': '1px solid #FF8000', 'width': 'calc(100% *' + pokemon.estadisticas.defensa/constante + ')', 'border-radius':'5px', 'height':'12px'}">
+               </div>
+            </td>
+         </tr>
+         <tr>
+            <th>Ataque especial</th>
+            <td>{{pokemon.estadisticas.ataque_especial}}</td>
+            <td>
+               <div
+                  [ngStyle]="{'background-color': '#FAAC58', 'border': '1px solid #FF8000', 'width': 'calc(100% *' + pokemon.estadisticas.ataque_especial/constante + ')', 'border-radius':'5px', 'height':'12px'}">
+               </div>
+            </td>
+         </tr>
+         <tr>
+            <th>Defensa especial</th>
+            <td>{{pokemon.estadisticas.defensa_especial}}</td>
+            <td>
+               <div
+                  [ngStyle]="{'background-color': '#FAAC58', 'border': '1px solid #FF8000', 'width': 'calc(100% *' + pokemon.estadisticas.defensa_especial/constante + ')', 'border-radius':'5px', 'height':'12px'}">
+               </div>
+            </td>
+         </tr>
+         <tr>
+            <th>Velocidad</th>
+            <td>{{pokemon.estadisticas.velocidad}}</td>
+            <td>
+               <div
+                  [ngStyle]="{'background-color': '#FAAC58', 'border': '1px solid #FF8000', 'width': 'calc(100% *' + pokemon.estadisticas.velocidad/constante + ')', 'border-radius':'5px', 'height':'12px'}">
+               </div>
+            </td>
+         </tr>
+         <tr>
+            <th>Total</th>
+            <th>{{total}}</th>
+         </tr>
+         <tr></tr>
+      </tbody>
+   </table>
+</div>
 
-<table class="table table-striped">
-   <thead>
- <tr>
-   <th scope="col">ID</th>
-   <th scope="col">Nombre</th>
-   <th scope="col">Tipos</th>
-   <th scope="col">Habilidades</th>
- </tr>
-</thead>
-<tbody>
- <tr>
-   <th scope="row">{{pokemon.id}}</th>
-   <td>{{pokemon.nombre}}</td>
-   <td>{{pokemon.tipo1}}</td>
-   <td>{{pokemon.habilidades}}</td>
- </tr>
-</tbody>
-<br>
-
-<ul class="list-group">
-   <li class="list-group-item"><h4>Movimientos</h4></li>
-   <li class="list-group-item list-group-item-info" *ngFor="let movimiento of pokemon.movimientos">{{movimiento}}</li>
-
- </ul>
-
-<br>
-<h4>Estadisticas</h4>
-
-</table>
-      <table class="tabpokemon">
-         <tbody>
-            <tr class="enlacesblancos">
-               <th></th>
-               <th colspan="2">Estadisticas</th>
-            </tr>
-            <tr>
-               <th class="enlacesblancos">HP</th>
-               <td style="width:3em">{{pokemon.estadisticas.hp}}</td>
-               <td style="width:257px">
-                  <div class="float-app" style="background-color: #FAAC58; border: 1px solid #FF8000; width: calc(100% * 45/257); border-radius:5px; height:12px"></div>
-               </td>
-            </tr>
-            <tr>
-               <th class="enlacesblancos">Attack</th>
-               <td>{{pokemon.estadisticas.ataque}}</td>
-               <td>
-                  <div class="float-app" style="background-color: #FAAC58; border: 1px solid #FF8000; width: calc(100% * 49/257); border-radius:5px; height:12px"></div>
-               </td>
-            </tr>
-            <tr>
-               <th class="enlacesblancos">Defense</th>
-               <td>{{pokemon.estadisticas.defensa}}</td>
-               <td>
-                  <div class="float-app" style="background-color: #FAAC58; border: 1px solid #FF8000; width: calc(100% * 49/257); border-radius:5px; height:12px"></div>
-               </td>
-            </tr>
-            <tr>
-               <th class="enlacesblancos">Special-attack</th>
-               <td>{{pokemon.estadisticas.ataque_especial}}</td>
-               <td>
-                  <div class="float-app" style="background-color: #F7D358; border: 1px solid #DBA901; width: calc(100% * 65/257); border-radius:5px; height:12px"></div>
-               </td>
-            </tr>
-            <tr>
-               <th class="enlacesblancos">special-defense</th>
-               <td>{{pokemon.estadisticas.defensa_especial}}</td>
-               <td>
-                  <div class="float-app" style="background-color: #F7D358; border: 1px solid #DBA901; width: calc(100% * 65/257); border-radius:5px; height:12px"></div>
-               </td>
-            </tr>
-            <tr>
-               <th class="enlacesblancos">Speed</th>
-               <td>{{pokemon.estadisticas.velocidad}}</td>
-               <td>
-                  <div class="float-app" style="background-color: #FAAC58; border: 1px solid #FF8000; width: calc(100% * 45/257); border-radius:5px; height:12px"></div>
-               </td>
-            </tr>
-            <tr class="enlacesblancos">
-               <th>Total</th>
-               <th>318</th>
-            </tr>
-            <tr></tr>
-         </tbody>
-      </table>
+<div class="contenedor-inferior">
+   <h2 class="titulo-lista">Lista de movimientos</h2>
+   <ul class="lista-movimientos">
+      <li class="movimiento-item" *ngFor="let movimiento of pokemon.movimientos">{{movimiento}}</li>
+   </ul>
+</div>

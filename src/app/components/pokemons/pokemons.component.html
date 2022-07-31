@@ -1,4 +1,7 @@
-
-<div *ngFor="let pokemon of pokemons">
-    <app-carta [pokemon]="pokemon" (pokemonAVisualizar)="mostrarDetalles($event)"></app-carta>
+<div class="espacio">
+    <div class="container-cartas" *ngIf="pokemons">
+        <article class="article-carta" *ngFor="let pokemon of pokemons">
+            <app-carta [pokemon]="pokemon" (pokemonAVisualizar)="mostrarDetalles($event)"></app-carta>
+        </article>
+    </div>
 </div>

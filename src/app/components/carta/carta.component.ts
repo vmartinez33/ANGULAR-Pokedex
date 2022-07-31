@@ -16,6 +16,11 @@ export class CartaComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  obtenerURL (tipo:string): string {
+    let tipoPrueba:string = "rock"; 
+    return `https://raw.githubusercontent.com/vmartinez33/pokemon_images/main/type_${tipoPrueba}.png`;
+  }
+
   visualizarDetalles(event: Event) {
     this.pokemonAVisualizar.emit(this.pokemon);    
   }

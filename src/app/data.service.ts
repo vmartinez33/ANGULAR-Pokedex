@@ -7,7 +7,6 @@ import { Stats } from './models/stats';
 import listaPokemons from 'src/assets/data/pokemon.json'
 import listaMovimientos from 'src/assets/data/moves.json'
 
-
 @Injectable({
   providedIn: 'root'
 })

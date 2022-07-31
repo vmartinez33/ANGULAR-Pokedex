@@ -1,5 +1,10 @@
-.inicio {
-    height: 700px;
-    width: auto;
+.titulo_principal{
+    margin: 0px;
+    line-height: 100px;
+    font-family: 'Pokemon Solid', 'Times New Roman', Times, serif;
+    color: #ffcc03;
     text-align: center;
+    font-size: 45px;
+    font-weight: lighter;
+    -webkit-text-stroke: 0.9px blue;
 }

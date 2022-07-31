@@ -1,0 +1,12 @@
+.container-cartas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1;
+    margin-top: 2px;
+    margin-bottom: 6px;
+    justify-content: center;
+}
+
+.article-carta {
+    margin: 10px;
+}

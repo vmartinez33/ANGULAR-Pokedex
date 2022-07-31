@@ -16,7 +16,7 @@ export class PokemonsComponent implements OnInit {
     private router:Router,
     private dataService: DataService
   ) {
-    this.pokemons = dataService.getPokemonList();
+    this.pokemons = this.dataService.getPokemonList();
    }
 
   ngOnInit(): void {

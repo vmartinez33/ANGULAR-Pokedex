@@ -1,37 +1,60 @@
-table.tabpokemon {
-    line-height: 22px;
-}
-table.tabmov, table.tabpokemon {
-    margin: 5px auto 1.5em;
-}
-table.movnivel, table.movmtmo, table.movtutor, table.movhuevo, table.movespecial, table.estadisticas, table.tabmov, table.tabpokemon {
-    border: 2px solid #C6C6C6;
-    border-collapse: collapse;
-    font-size: 90%;
+div.contenedor-inferior {
     text-align: center;
-    margin: 5px 0 1.5em;
-    background-color: #FFFFFF;
-    box-shadow: 0.3em 0.3em 0.5em #acacad;
 }
+
 table {
-    font-size: 100%;
-}
-table {
+    border: 2px solid #C6C6C6;
     display: table;
-    border-collapse: separate;
+    border-collapse: collapse;
     box-sizing: border-box;
     text-indent: initial;
     border-spacing: 2px;
     border-color: grey;
+    font-size: 90%;
+    text-align: center;
+    margin: auto;
+    background-color: #FFFFFF;
+    box-shadow: 0.3em 0.3em 0.5em #acacad;
+    line-height: 22px;   
 }
-table.tabpokemon th {
+
+table th {
     background-color: #3B3B3B;
     border: 2px solid #333;
     color: white;
     height: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-table.tabpokemon td {
+table td {
     border-right: 1px solid #C6C6C6;
     border-bottom: 1px solid #C6C6C6;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+img.pokemon-tipo {
+    height: 20px;
+}
+
+table.tabpokemon {
+    margin-bottom: 25px;
+}
+
+table.tabstats {
+    margin-bottom: 50px;
+}
+
+ul.lista-movimientos {
+    column-count: 9;
+}
+
+li.movimiento-item {
+    background-color: #3B3B3B;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    list-style: none;
+    margin-bottom: 20px;
 }

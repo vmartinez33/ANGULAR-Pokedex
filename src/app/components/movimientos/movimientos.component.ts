@@ -10,12 +10,22 @@ import { Movimiento } from 'src/app/models/movimiento';
 })
 export class MovimientosComponent implements OnInit {
   public movimientos:Array<Movimiento>;
+  public detalles:string;
+  public visible:boolean;
 
   constructor(private dataService: DataService) {
-    this.movimientos = dataService.getMovesList();
+    this.movimientos = this.dataService.getMovesList();
+    this.detalles = "";
+    this.visible = false;
   }
 
   ngOnInit(): void {
+  }
+
+  public mostrarDetalles(movimiento: Movimiento): void {
+    this.visible = true;
+    this.detalles = `El movimiento es: ${movimiento.nombre}`;
+    window.scroll(0,0);
   }
 
 }

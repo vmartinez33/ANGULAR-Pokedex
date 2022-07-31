@@ -5,7 +5,6 @@ import { routing } from './app.routing';
 import { AppComponent } from './app.component';
 import { SpriteComponent } from './components/sprite/sprite.component';
 import { PokemonsComponent } from './components/pokemons/pokemons.component';
-import { TipoComponent } from './components/tipo/tipo.component';
 import { CartaComponent } from './components/carta/carta.component';
 import { MovimientosComponent } from './components/movimientos/movimientos.component';
 import { CabeceraComponent } from './components/cabecera/cabecera.component';
@@ -21,7 +20,6 @@ import { DataService } from './data.service';
     AppComponent,
     SpriteComponent,
     PokemonsComponent,
-    TipoComponent,
     CartaComponent,
     MovimientosComponent,
     CabeceraComponent,

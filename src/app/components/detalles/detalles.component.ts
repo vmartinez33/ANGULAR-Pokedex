@@ -12,25 +12,27 @@ import { Stats } from 'src/app/models/stats';
 })
 export class DetallesComponent implements OnInit {
   public pokemon:Pokemon;
+  public total:number;
+  public constante:number;
 
   constructor(
     private route:ActivatedRoute,
     private dataService: DataService
   ) {
     this.pokemon = new Pokemon(-1, "", "", "", [], [], new Stats(0,0,0,0,0,0));
+    this.total = 0;
+    this.constante = 257;
   }
 
   ngOnInit(): void {
-    // this.route.params.subscribe((params: Params) =>{ 
-    //   let data = listaPokemons[params["id"]-1];
-    //   this.pokemon = new Pokemon(data.id, data.name, data.type_1, data.type_2, data.abilities, data.moves, data.stats);
-    // });
-
-    // this.route.queryParams.subscribe(params => {
-    //   this.pokemon = JSON.parse(params["pokemon"])
-    // });
-
     this.pokemon = this.dataService.getSavedPokemon();
+    this.total = this.pokemon.estadisticas.hp + this.pokemon.estadisticas.ataque + this.pokemon.estadisticas.defensa +
+      this.pokemon.estadisticas.ataque_especial + this.pokemon.estadisticas.defensa_especial + this.pokemon.estadisticas.velocidad;
+    window.scroll(0,0);
   }
 
+  public obtenerURL(tipo:string):string {
+    let tipoPrueba:string = "rock"; 
+    return `https://raw.githubusercontent.com/vmartinez33/pokemon_images/main/type_${tipoPrueba}.png`;
+  }
 }

@@ -3,30 +3,19 @@ header div.fondo_titulo {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 150px;
+    height: 200px;
     line-height: 150px;
     text-align: center;
 }
 
-header div.fondo_titulo span{
-    font-weight: bold;
-    color: white;
-    vertical-align: middle;
-    line-height: normal;
-    font-size: 36px;
-    background-color: rgba(214, 122, 18, 0.205);
+header div.fondo_logo {
+    height: 150px;
+    line-height: 150px;
+    text-align: center;
+    background: linear-gradient(to right, #d15151, #bd0f03 );
 }
 
-header.titulo_principal h1{
-    margin: 0px;
-    height: 100px;
-    line-height: 100px;
-    font-family: 'Pokemon Solid';
-    background: linear-gradient(to right, #d15151, #bd0f03 );
-    color: #ffcc03;
-    text-align: center;
-    font-size: 45px;
-    font-weight: lighter;
-    padding: 10px;
-    -webkit-text-stroke: 0.9px blue;
+img.logo {
+    width: 250px;
 }
+
